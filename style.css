@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Italianno&family=Nunito:wght@300;400;500;600&family=Poppins:ital,wght@0,200;0,300;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+video {
+  z-index: 1;
+  opacity: 0.5;
+}
+body {
+  font-family: "DotGothic16", "Poppins" sans-serif;
+  background-color: rgb(37, 10, 68);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.cal-container {
+  width: 90%;
+  max-width: 530px;
+  height: 700px;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* border: 1px solid rgba(18, 199, 125, 0.25); */
+  animation: border 15s ease infinite;
+  /* background-color: rgb(221, 207, 188); */
+  /* background-color: rgb(0, 0, 1); */
+  padding-right: 10px;
+}
+.display-screen {
+  animation: displayScreen 2s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: "DotGothic16";
+  letter-spacing: 5px;
+  color: rgb(94, 255, 0);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgba(12, 109, 244, 0.091);
+}
+.history-output {
+  margin-bottom: 10px;
+  color: rgb(222, 181, 211);
+  font-size: 24px;
+}
+.result-output {
+  font-size: 40px;
+}
+.temporary-result {
+  margin-right: 450px;
+  color: rgb(185, 180, 163);
+  font-size: 16px;
+}
+.buttons-container {
+  color: whitesmoke;
+  width: 100%;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  /* border-radius: 10px; */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* border: 1px solid rgba(51, 123, 225, 0.25); */
+
+  margin: 5px;
+  animation: border 15s ease infinite;
+  padding-right: 15px;
+}
+.equal-btn {
+  grid-column: 3/5;
+  /* background-color: rgba(3, 75, 25, 0.435); */
+}
+.button {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  font-size: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3;
+  /* border: 0.5px solid rgb(158, 133, 133); */
+  animation: border 15s ease infinite;
+  box-shadow: rgba(243, 123, 3, 0.35) 0px 5px 15px;
+  margin: 2px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+@keyframes border {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes displayScreen {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+.button:hover {
+  background-color: goldenrod;
+  color: #000;
+  border-radius: 0.5rem;
+  font-size: 40px;
+  transform: scaleX(50deg);
+}
