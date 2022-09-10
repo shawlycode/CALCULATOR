@@ -39,7 +39,7 @@ operatorsBtn.forEach((operator) => {
     } else {
       result = parseFloat(disNum2);
     }
-    console.log(result);
+    // console.log(result);
     clearNum(operatorName);
     lastOperation = operatorName;
   });
@@ -51,7 +51,7 @@ function clearNum(operatorSelected = "") {
   disNum2 = "";
   tempResult.innerText = result;
 }
-//operators math function
+//operators math function using the parseFloat function to convert strings to numbers
 function operatorFunc() {
   if (lastOperation === "x") {
     result = parseFloat(result) * parseFloat(disNum2);
