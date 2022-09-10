@@ -9,7 +9,7 @@ const deleteBtn = document.querySelector(".delete");
 
 //declare global variable to store numbers
 let disNum1 = "";
-let disNum2 = "";
+let disNum2 = [];
 let lastOperation = "";
 let result = null;
 let dot = false;
@@ -89,5 +89,5 @@ clearAllBtn.addEventListener("click", (e) => {
 
 //delete btn function
 deleteBtn.addEventListener("click", (e) => {
-  displayResult.innerText = result.splice(0, -1);
+  displayResult.innerText = displayResult.innerText.slice(0, -1);
 });
